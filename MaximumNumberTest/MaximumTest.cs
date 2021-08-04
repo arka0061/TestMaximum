@@ -52,5 +52,27 @@ namespace MaximumNumberTest
             double max = MaximumNumber.CheckNumberFloat(78.6, 27.5, 80.2);
             Assert.AreEqual(80.2, max);
         }
+      
+        /// TC 3.1    
+        [Test]
+        public void GivenMaxStringFirstPositon_whenFindMax_shouldReturnsMaxFirstPosition()
+        {
+            string max = MaximumNumber.CheckStringMax("Apple", "Ball", "Car");        
+            Assert.AreEqual("Car", max);
+        }
+        /// TC 3.2
+        [Test]
+        public void GivenMaxStringSecondPositon_whenFindMax_shouldReturnsMaxSecondPosition()
+        {
+            string max = MaximumNumber.CheckStringMax("Ball", "Car", "Apple");
+            Assert.AreEqual("Car", max);
+        }     
+        /// TC 3.3
+        [Test]
+        public void GivenMaxStringThirdPositon_whenFindMax_shouldReturnsMaxThirdPosition()
+        {
+            string max = MaximumNumber.CheckStringMax("Apple", "Ball", "Car");
+            Assert.AreEqual("Car", max);
+        }
     }
 }
