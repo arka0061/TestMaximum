@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using TestMaximum;
 using Assert = NUnit.Framework.Assert;
 
 namespace MaximumNumberTest
@@ -10,22 +11,25 @@ namespace MaximumNumberTest
         ///TC 1.1
         public static void GivenMaxNumFirstPosition_whenFindMaxNum_shouldReturnsMaxFirst()
         {
-            int max = MaximumNumber.CheckNumberInteger(100, 80, 60);
-            Assert.AreEqual(100, max);
+            Generics<int> MaxValue = new Generics<int>(400, 200, 240);
+            int max = MaxValue.MaxMethod();
+            Assert.AreEqual(400,max);
         }
         [Test]
         ///TC 1.2
         public void GivenMaxNumSecondPosition_whenFindMaxNum_shouldReturnsMaxSecond()
         {
-            int max = MaximumNumber.CheckNumberInteger(200, 300, 150);
+            Generics<int> MaxValue = new Generics<int>(200, 300, 240);
+            int max = MaxValue.MaxMethod();
             Assert.AreEqual(300, max);
         }
         [Test]
         ///TC 1.3
         public void GivenMaxNumThirdPosition_whenFindMaxNum_shouldReturnsMaxThird()
         {
-            int max = MaximumNumber.CheckNumberInteger(550,600,1000);
-            Assert.AreEqual(1000,max);
+            Generics<int> MaxValue = new Generics<int>(420, 200, 440);
+            int max = MaxValue.MaxMethod();
+            Assert.AreEqual(440, max);
         }
 
 
@@ -33,45 +37,51 @@ namespace MaximumNumberTest
         ///TC 2.1
         public void GivenFloatNumFirstPostion_whenFindMax_shouldReturnsMaxFirst()
         {
-            double max = MaximumNumber.CheckNumberFloat(30.7, 17.8, 14.6);
-            Assert.AreEqual(30.7, max);
+            Generics<float> MaxValue = new Generics<float>(20, 40, 24);
+            float max = MaxValue.MaxMethod();
+            Assert.AreEqual(40.0, max);
         }
 
         [Test]
         ///TC 2.2
         public void GivenFloatNumSecondPostion_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            double max = MaximumNumber.CheckNumberFloat(40.7, 80.2, 20.5);
-            Assert.AreEqual(80.2, max);
+            Generics<float> MaxValue = new Generics<float>(40, 20, 44);
+            float max = MaxValue.MaxMethod();
+            Assert.AreEqual(43.0, max);
         }
 
         [Test]
         ///TC 2.3
         public void GivenFloatNumThirdPostion_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            double max = MaximumNumber.CheckNumberFloat(78.6, 27.5, 80.2);
-            Assert.AreEqual(80.2, max);
+            Generics<float> MaxValue = new Generics<float>(40, 20, 24);
+            float max = MaxValue.MaxMethod();
+            Assert.AreEqual(40.0, max);
         }
       
         /// TC 3.1    
         [Test]
         public void GivenMaxStringFirstPositon_whenFindMax_shouldReturnsMaxFirstPosition()
         {
-            string max = MaximumNumber.CheckStringMax("Apple", "Ball", "Car");        
+            Generics<string> MaxValue = new Generics<string>("Ball", "Car", "Apple");
+            string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
         }
         /// TC 3.2
         [Test]
         public void GivenMaxStringSecondPositon_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            string max = MaximumNumber.CheckStringMax("Ball", "Car", "Apple");
+            Generics<string> MaxValue = new Generics<string>("Ball", "Car", "Apple");
+            string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
         }     
         /// TC 3.3
         [Test]
         public void GivenMaxStringThirdPositon_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            string max = MaximumNumber.CheckStringMax("Apple", "Ball", "Car");
+            Generics<string> MaxValue = new Generics<string>("Ball", "Apple","Car" );
+            string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
         }
     }

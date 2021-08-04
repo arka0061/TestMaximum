@@ -23,7 +23,7 @@ public class MaximumNumber
             throw new Exception("firstNumber,SecondNumber,ThirdNumber are all equal");
         }
     }
-    public static double CheckNumberFloat(double firstNumber, double secondNumber, double thirdNumber)
+    public static float CheckNumberFloat(float firstNumber, float secondNumber, float thirdNumber)
     {
         if (firstNumber.CompareTo(secondNumber) > 0 && firstNumber.CompareTo(thirdNumber) > 0)
         {
