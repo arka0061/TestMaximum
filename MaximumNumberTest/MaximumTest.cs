@@ -88,7 +88,7 @@ namespace MaximumNumberTest
         [Test]
         public void GivenMaxStringFourthPositon_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            string[] array = { "Apple", "Ball","Bat" ,"Car" };
+            string[] array = { "Apple", "Ball" ,"Bat" ,"Car" };
             Generics<string> MaxValue = new Generics<string>(array);
             string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
