@@ -8,7 +8,7 @@ namespace TestMaximum
     {
         public static void Main(String[] args)
         {
-            int[] arrayInteger = { 700, 400, 100, 300, 500 };
+            int[] arrayInteger = { 200, 400, 100, 300, 500 };
             Generics<int> generic = new Generics<int>(arrayInteger);
             generic.PrintMaxValue();
 

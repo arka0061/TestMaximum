@@ -7,30 +7,25 @@ namespace TestMaximum
 
     public class Generics<T> where T : IComparable
     {
-        public T[] number;
-        public Generics(T[] number)
+        public T[] arrayNew;
+        public Generics(T[] arrayOriginal)
         {
-            this.number = number;
+            this.arrayNew = arrayOriginal;
         }
         public T[] Sort(T[] values)
         {
             Array.Sort(values);
             return values;
         }
-        public T MaxValue(params T[] values)
+        public T MaxValue(T[] values)
         {
-            var sorted_values = Sort(number);
+            var sorted_values = Sort(arrayNew);
             return sorted_values[^1];
         }
-        public T MaxMethod()
-        {
-            var max = MaxValue(this.number);
-            return max;
-        }
-       
+          
             public void PrintMaxValue()
-        {
-            var print = MaxValue(this.number);      
+            {
+            var print = MaxValue(arrayNew);      
             Console.WriteLine("Maximum value is " + print);
         }
     }
