@@ -19,13 +19,19 @@ namespace TestMaximum
         }
         public T MaxValue(params T[] values)
         {
-            var sorted_values = Sort(values);
+            var sorted_values = Sort(number);
             return sorted_values[^1];
         }
         public T MaxMethod()
         {
             var max = MaxValue(this.number);
             return max;
+        }
+       
+            public void PrintMaxValue()
+        {
+            var print = MaxValue(this.number);      
+            Console.WriteLine("Maximum value is " + print);
         }
     }
 }
