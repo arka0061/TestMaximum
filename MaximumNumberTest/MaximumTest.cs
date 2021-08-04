@@ -11,7 +11,8 @@ namespace MaximumNumberTest
         ///TC 1.1
         public static void GivenMaxNumFirstPosition_whenFindMaxNum_shouldReturnsMaxFirst()
         {
-            Generics<int> MaxValue = new Generics<int>(400, 200, 240);
+            int[] array = {400, 100, 300 };
+            Generics<int> MaxValue = new Generics<int>(array);
             int max = MaxValue.MaxMethod();
             Assert.AreEqual(400,max);
         }
@@ -19,7 +20,8 @@ namespace MaximumNumberTest
         ///TC 1.2
         public void GivenMaxNumSecondPosition_whenFindMaxNum_shouldReturnsMaxSecond()
         {
-            Generics<int> MaxValue = new Generics<int>(200, 300, 240);
+            int[] array = { 200, 300, 240 };
+            Generics<int> MaxValue = new Generics<int>(array);
             int max = MaxValue.MaxMethod();
             Assert.AreEqual(300, max);
         }
@@ -27,9 +29,10 @@ namespace MaximumNumberTest
         ///TC 1.3
         public void GivenMaxNumThirdPosition_whenFindMaxNum_shouldReturnsMaxThird()
         {
-            Generics<int> MaxValue = new Generics<int>(420, 200, 440);
+            int[] array = { 400, 100, 500 };
+            Generics<int> MaxValue = new Generics<int>(array);
             int max = MaxValue.MaxMethod();
-            Assert.AreEqual(440, max);
+            Assert.AreEqual(500, max);
         }
 
 
@@ -37,34 +40,38 @@ namespace MaximumNumberTest
         ///TC 2.1
         public void GivenFloatNumFirstPostion_whenFindMax_shouldReturnsMaxFirst()
         {
-            Generics<float> MaxValue = new Generics<float>(20, 40, 24);
+            float[] array= { 400, 100, 300 };
+            Generics<float> MaxValue = new Generics<float>(array);
             float max = MaxValue.MaxMethod();
-            Assert.AreEqual(40.0, max);
+            Assert.AreEqual(400, max);
         }
 
         [Test]
         ///TC 2.2
         public void GivenFloatNumSecondPostion_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            Generics<float> MaxValue = new Generics<float>(40, 20, 44);
+            float[] array = { 400, 500, 300 };
+            Generics<float> MaxValue = new Generics<float>(array);
             float max = MaxValue.MaxMethod();
-            Assert.AreEqual(43.0, max);
+            Assert.AreEqual(500, max);
         }
 
         [Test]
         ///TC 2.3
         public void GivenFloatNumThirdPostion_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            Generics<float> MaxValue = new Generics<float>(40, 20, 24);
+            float[] array = { 400, 100, 600 };
+            Generics<float> MaxValue = new Generics<float>(array);
             float max = MaxValue.MaxMethod();
-            Assert.AreEqual(40.0, max);
+            Assert.AreEqual(600, max);
         }
       
         /// TC 3.1    
         [Test]
         public void GivenMaxStringFirstPositon_whenFindMax_shouldReturnsMaxFirstPosition()
         {
-            Generics<string> MaxValue = new Generics<string>("Ball", "Car", "Apple");
+            string[] array = { "Car","Ball", "Apple" };
+            Generics<string> MaxValue = new Generics<string>(array);
             string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
         }
@@ -72,7 +79,8 @@ namespace MaximumNumberTest
         [Test]
         public void GivenMaxStringSecondPositon_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            Generics<string> MaxValue = new Generics<string>("Ball", "Car", "Apple");
+            string[] array = { "Ball", "Car", "Apple" };
+            Generics<string> MaxValue = new Generics<string>(array);
             string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
         }     
@@ -80,7 +88,8 @@ namespace MaximumNumberTest
         [Test]
         public void GivenMaxStringThirdPositon_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            Generics<string> MaxValue = new Generics<string>("Ball", "Apple","Car" );
+            string[] array = { "Apple", "Ball", "Car" };
+            Generics<string> MaxValue = new Generics<string>(array);
             string max = MaxValue.MaxMethod();
             Assert.AreEqual("Car", max);
         }
