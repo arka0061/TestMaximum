@@ -22,11 +22,6 @@ namespace TestMaximum
             var sorted_values = Sort(number);
             return sorted_values[^1];
         }
-        public T MaxMethod()
-        {
-            var max = MaxValue(this.number);
-            return max;
-        }
        
             public void PrintMaxValue()
         {
